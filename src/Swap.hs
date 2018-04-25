@@ -7,6 +7,6 @@ swap = ejecutarInstr swapAConB
 
 swapAConB :: Micro -> Micro
 swapAConB micro = micro {
-	acumuladorA = acumuladorB micro,
-	acumuladorB = acumuladorA micro
+ acumuladorA = acumuladorB micro,
+ acumuladorB = acumuladorA micro
 }

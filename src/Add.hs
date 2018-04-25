@@ -7,5 +7,5 @@ add = ejecutarInstr (resetB.sumarAConB)
 
 sumarAConB :: Micro -> Micro
 sumarAConB micro = micro {
-	acumuladorA = acumuladorA micro + acumuladorB micro
+ acumuladorA = acumuladorA micro + acumuladorB micro
 }

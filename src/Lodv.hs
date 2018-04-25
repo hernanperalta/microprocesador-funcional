@@ -7,5 +7,5 @@ lodv valor = ejecutarInstr (cargarValorEnA valor)
 
 cargarValorEnA :: Int -> Micro -> Micro
 cargarValorEnA valor micro = micro {
-	acumuladorA = valor
+ acumuladorA = valor
 }

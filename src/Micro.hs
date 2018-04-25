@@ -36,37 +36,37 @@ algo = (3,2,1)
 --}
 
 data Micro = UnMicro {
-	memoria :: [Int],
-	acumuladorA :: Int,
-	acumuladorB :: Int,
-	programCounter :: Int,
-	mensajeDeError :: String
+ memoria :: [Int],
+ acumuladorA :: Int,
+ acumuladorB :: Int,
+ programCounter :: Int,
+ mensajeDeError :: String
 } deriving Show
 
 xt8088 = UnMicro {
-	memoria = [],
-	acumuladorA = 0,
-	acumuladorB = 0,
-	programCounter = 0,
-	mensajeDeError = ""
+ memoria = [],
+ acumuladorA = 0,
+ acumuladorB = 0,
+ programCounter = 0,
+ mensajeDeError = ""
 }
 
 intel8086 = UnMicro {
-	memoria = [101,111,11,10,110],
-	acumuladorA = 81,
-	acumuladorB = 9,
-	programCounter = 0,
-	mensajeDeError = ""
+ memoria = [101,111,11,10,110],
+ acumuladorA = 81,
+ acumuladorB = 9,
+ programCounter = 0,
+ mensajeDeError = ""
 }
 
 ejecutarInstr :: (Micro -> Micro) -> Micro -> Micro
 ejecutarInstr instr micro = (instr micro) {
-	programCounter = programCounter micro + 1
+ programCounter = programCounter micro + 1
 }
 
 tamanioMemoria = length.memoria
 
 resetB :: Micro -> Micro
 resetB micro = micro {
-	acumuladorB = 0
+ acumuladorB = 0
 }
